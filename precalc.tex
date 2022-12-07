@@ -1,0 +1,223 @@
+\documentclass{report}
+
+\usepackage{graphicx}
+	\graphicspath{ {./images/Precalc} }
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{pgfplots}
+\usepackage{bold-extra}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage{array}
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{Precalculus}}
+\author{Me. I am Him.}
+\date{11/28/2022}
+
+\begin{document}
+
+\maketitle
+\newpage
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+
+\chapter{}
+\chapter{}
+
+\chapter{}
+\section{Properties of functions and Complex Zeros}
+
+\subsection{3.1 - Completing the square}
+\dfn{Completing the square}{In form $ax^{2}+bx+c$, you half b, and then square.}
+
+\nt{Forms:
+	\begin{center}
+		\item Standard: $ax^{2}+bx+c$ ; $a\neq0$
+		\item Vertex: $a(x-h)^{2}+k$ ; $a\neq0$
+	\end{center}}
+\nt{Verticies:
+	\begin{center}
+		\item Standard: (-b/2a , f(-b/2a)) 
+		\item Vertex: (h , k)
+	\end{center}}
+\nt{Axis of Symmetry:
+	\begin{center}
+		\item Standard: x=-b/2a 
+		\item Vertex: x=h
+	\end{center}}
+\nt{y-Intercept
+	\begin{center}
+		\item Standard: (0 , c) 
+		\item Vertex: \textit{Plug in 0 for x and solve} 
+		\item Note; There is always one.
+	\end{center}}
+\nt{x-Intercept
+	\begin{center}
+		\item Standard: $x = \frac{-b\pm\sqrt{b^{2}-4ac}}{2a}$, otherwise known as the quadratic formula.
+		\item If the inside of the quadratic is < 0, there are no x-intercepts.
+		\item If the inside of the quadratic is = 0, there is exactly one x-intercept.
+		\item If the inside of the quadratic is > 0, there are exactly two x-intercepts.
+		\item Vertex: \textit{Plug in 0 for y and solve}
+	\end{center}}
+
+
+
+
+\chapter{}
+\section{4: Composite Functions}
+\subsection{}
+\nt{11/28/2022 - Didn't really do much. just reviewed moslt what fog or f(g(x)) was.} 
+\subsection{}
+
+\subsection{Exponential Functions}
+\dfn{Are you prepared? MAKE NEW COMMAND}{
+	\begin{tabular}{rl}
+		& $\bullet$ $4^{3} = 8$ \\
+		& $\bullet$ $8^{\frac{2}{3}} = 4$ \\
+		& $\bullet$ $3^{-2} = \frac{1}{9}$
+	\end{tabular}}
+\nt{In a$^{n}$, \textit{a} is known as the base whereas \textit{n} is known as the exponent, index, or power.}
+\nt{Law of Exponents:
+	\begin{enumerate}[label=(\arabic*)]
+		\item $a^{m} \cdot a^{n} = a^{m+n}$			Example: 		$3^{2}\cdot 3^{5} = 3^{2+5} = 3^{7} = 2187$
+		\item $(a^{m})^{n} = a^{mn}$		Example:		$(2^{3})^{2} = 2^{3\cdot 2} = 2^{6} = 64$
+		\item $(ab)^{m} = a^{m}b^{m}$		Example:		$(5x)^3$
+		\item $1^{n} = 1$		Exaple:			$1{1001} = 1$
+		\item $a^{-n} = \frac{1}{a^{n}}$		Example:		$5^{-2} = \frac{1}{5^{2}} = \frac{1}{25}$
+		\item $a^{0} = 1$		Example:		$7^{0} = 1$
+		\item $a^{\frac{m}{n}} = \sqrt[n]{a^{m}} = (\sqrt[n]{a})^{m}$		Example:		$8^{\frac{2}{3}} = \sqrt[3]{8^{2}} = (\sqrt[3]{8})^{2} = 2^{2} = 4$
+	\end{enumerate}}
+\dfn{Exponential Function}{A function of the form f(x) = a$^{x}$ where x is a positive real number (a>0) and a $\neq$ 1. The domain of $f$ is $\mathbb{R}$}
+\ex{2: Graph the exponential function: $f(x) = 2^{x}$}{
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel=$x$,
+			ylabel=$f(x)$,
+			xtick={-3,-2,-1,0,1,2,3,4,5},
+			ytick={0,1,2,4,8,16,32},
+			ymin=0,
+			ymax=32,
+			xmin=-3,
+			xmax=5,
+			yticklabels={0,1,2,4,8,16,32},
+			xticklabels={-3,-2,-1,0,1,2,3,4,5},
+		]
+		\addplot[samples=200, smooth, domain=-3:5, red] {2^x};
+		\end{axis}
+		\end{tikzpicture}}
+\nt{Properties of the Exponential Function: $f(x) = a^{x}$, where $a>1$
+	\begin{enumerate}
+		\item The \textit{domain} is the set of all real numbers. The \textit{range} is the set of all positive real numbers.
+		\item There are no \textit{x-intercepts}. The \textit{y-intercept} is 1.
+		\item The \textit{x-axis} (y=0) is a horizontal asymptote as $x \rightarrow -\infty$
+		\item The function is an increasing function and is one-to-one.
+		\item The graph of f contains the points (0,1),(1,a), and (-1,1/a).
+		\item The graph of f is smooth and continuous, with no corners or gaps.
+	\end{enumerate}}
+\ex{3: Graph the exponential function: $f(x)=(\frac{1}{2})^{2}$}{
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel=$x$,
+			ylabel=$f(x)$,
+			xtick={-5,-4,-3,-2,-1,0,1,2,3,4,5},
+			ytick={0,1,2,4,8,16,32},
+			ymin=0,
+			ymax=32,
+			xmin=-5,
+			xmax=5,
+			yticklabels={0,1,2,4,8,16,32},
+			xticklabels={-5,-4,-3,-2,-1,0,1,2,3,4,5},
+		]
+		\addplot[samples=200, smooth, domain=-5:5, red] {(1/2)^x};
+		\end{axis}
+	\end{tikzpicture}}
+\nt{Properties of Exponential Function: $f(x)=a^{x}$, where $0<x<1$.
+\begin{enumerate}
+	\item The domain is the set of all real numbers; the range is the set of positive real numbers.
+	\item There are no x-intercepts; the y-intercept is 1.
+	\item The x-axis (y = 0) is a horizontal asymptote as $x\rightarrow\infty$.
+	\item The function is an decreasing function and is one-to-one.
+	\item The graph of f contains the points (0, 1), (1, a), and (-1, 1/a).
+	\item The graph of f is smooth and continuous, with no corners or gaps.
+\end{enumerate}}
+\ex{Graph $f(x) = 2^{-x}-3$ and determine the domain, range, and horizontal asymptote of $f$.}{
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel=$x$,
+			ylabel=$f(x)$,
+			xtick={-5,-4,-3,-2,-1,0,1,2,3,4,5},
+			ytick={-3,0,3,6,9,12,14,18,24,32},
+			ymin=-3,
+			ymax=32,
+			xmin=-5,
+			xmax=5,
+			yticklabels={-3,0,3,6,9,12,14,18,24,32},
+			xticklabels={-5,-4,-3,-2,-1,0,1,2,3,4,5},]
+		\addplot[samples=200, smooth, domain=-5:5, red] {2^(-x)-3};
+		\end{axis}
+	\end{tikzpicture}
+\begin{enumerate}
+		\item [Domain:] 4
+		\item [Range:] 6
+		\item [Horizontal Asymptote:] 12
+\end{enumerate}
+}
+\ex{Explain the transformation of g(x) from $f(x) = e^{x}$}{
+	\begin{tabular}{rl} 
+		& $\bullet$ $g(x) = -e^{x-3}$ \\
+		& $\bullet$ $g(x) = 3e^{-x}-5$
+	\end{tabular}}
+\ex{6: Solve $3^{x+1}=81$}{
+	\begin{tabular}{rl}
+		& $\bullet$ $3^{x+1} = 3^{4}$ \\
+		& $\bullet$ $x+1 = 4$ \\ 
+		& $\bullet$ $x = 3$
+	\end{tabular}}
+\ex{7: Solve $e^{-x^2} = (e^{x^2}\cdot\frac{1}{e^{3}})$}{
+	\begin{tabular}{rl}
+		& $\bullet$ $e^{-x^2} = e^{2x} \cdot e^{-3}$ \\
+		& $\bullet$ $e^{-x^{2}} = e^{2x-3}$ \\
+		& $\bullet$ $-x^{2} = 2x-3$ \\
+		& $\bullet$ $x^{2}+2x-3$ \\
+		& $\bullet$ $(x+3)(x-1) = 0$ \\
+		& $\bullet$ $x=-3,1$
+	\end{tabular}}
+\ex{8: Between 9 AM and 10 PM cars arrive at burger king's drive-thru at the rate of 12 cars per hour (0.2 cars per minute). The following formula from statistics can be used to determine the probability that a car will arrive within t minutes of 9 PM}{
+	$F(t)=1-e^{-2t}$
+	\begin{enumerate}[label=(\alph*)]
+		\item 63\%
+		\item 99.7\%
+		\item graph
+		\item other thing
+	\end{enumerate}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\begin{figure}
+	\centering
+	\Huge{Thanks for reading}
+	\includegraphics[scale=0.5]{dabloon.png}
+	\label{dabloonia}
+\end{figure}
+
+
+
+
+\end{document}
