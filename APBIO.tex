@@ -1,7 +1,7 @@
 \documentclass{report}
 
 \usepackage{graphicx}
-	\graphicspath{ {./images/APBIO} }
+	\graphicspath{{./images/APBIO}}
 \usepackage[T1]{fontenc}
 \usepackage{bold-extra}
 \usepackage{lmodern}
@@ -95,7 +95,7 @@
 \nt{If there is no DNA, or the DNA cannot be transcribed, no proteins will be made}
 \qs{How is DNA packaged?}{
 	\begin{enumerate}
-		\item The DNA is wrapped around a\textbf{histone} twice.
+		\item The DNA is wrapped around a \textbf{histone} twice.
 	\item Eight histones are then gathered, creating a line. A sort-of beads-on-a-string. These are called \textbf{Nucleosomes}.
 	\item These nucleosomes eventually clump up, creating many loop shapes, called \textbf{looped domains}.
 	\item These looped domains eventually organize into \textbf{Metaphase chromosomes}.
@@ -151,7 +151,7 @@
 \subsection{Cloning}
 \dfn{Polymerase Chain Reaction (PCR)}{A process by which sections of a DNA sample is amplified. The process is done in a thermocycler.}
 \begin{figure}
-	\includegraphics[scale=0.4]{Chapter 13 - PCR.jpeg} \label{PCR}
+	\includegraphics[scale=0.4]{Chapter 13 - PCR.png} \label{PCR}
 \end{figure}
 \dfn{Restriction Enzyme}{Cleaves DNA sequences as sequence-specific sites, producing DNA fragments with a known sequence at each end.}
 
@@ -175,7 +175,8 @@
 	$\bullet$ We can then stain the sorted groups of DNA, allowing the naked eye to see them. We don't see individual strands, though, we see the groups of them.
 	\nt{Fragments are sorted by \textbf{size} and \textbf{charge}. Smaller molecules go farther.}}
 \begin{figure}
-	\includegraphics[scale=0.3]{Chapter 13 - Gel Electrophoresis.png} \label{Gel Electrophoresis}
+	\includegraphics[scale=0.3]{Chapter 13 - Gel Electrophoresis.png}
+	\label{Gel Electrophoresis}
 \end{figure}
 
 \pagebreak
@@ -189,7 +190,8 @@
 		\end{enumerate}}
 \nt{If you know the sequence of the gene, you can create the guide RNA.}}
 \begin{figure}
-	\includegraphics[scale=1]{Chapter 13 - Cas9 RNA.jpg} \label{Cas9}
+	\includegraphics[scale=1]{Chapter 13 - Cas9 RNA.jpg} 
+	\label{Cas9}
 \end{figure}
 
 
@@ -306,26 +308,80 @@
 \dfn{Insertions and Deletions}{The addition or removal of a nucleotide pair in a gene. This usually leads to massive issues in the reading and translation of the RNA. This is also called a frameshift mutation.}
 \dfn{Mutagen}{Physical or chemical agents that can cause mutations. Examples include smoking, radioactivity, and more.}
 
+\dfn{Lac Operon}{When would enzymes \textit{NOT} be made? -> 
+\begin{enumerate}
+	\item [-] When Lactose is NOT present.
+	\item [-] When Glucose IS present.
+\end{enumerate}}
 
+\nt{Allolactose is another way to say lactose.}
+\nt{The \textit{Lac} Operon and \textit{Trp} Operon are different in that the Lac prosessor (inhibitor) is made active, whereas the Trp processor (inhibitor) is made inactive.}
+\dfn{Repressible Operon}{
+	\begin{enumerate}
+		\item [-] Usually Functions in anabolic pathways.
+		\item [-] Synthesizing end products
+		\item [-] When end product is present cell allocates to other uses.
+		\item [-] Trp Operon.
+		\item [-] Genes are active.
+		\item [-] Regulatory protein (inhibitor) is made in the inactive form.
+		\item [-] The things being made activates the regulatory protein when there is enough of that thing.
+	\end{enumerate}}
 
+\dfn{Inducible Operon}{
+	\begin{enumerate}
+		\item [-] Usually functions in catabolic pathways, digesting nutrients to simpler proteins.
+		\item [-] Produce enzymes only when nutrient is available.
+		\item [-] Cell avoids making proteins that have nothing to do.
+		\item [-] Lac Operon.
+		\item [-] Genes are inactive.
+		\item [-] Regulatory Protein (inhibitor) is made in active form.
+		\item [-] The thing being broken down inactivates the regulatory protein when that thing is around
+	\end{enumerate}}
 
+\nt{This \textit{ONLY} in Prokaryotes. Control in Eukaryotes is completely different thanks to their DNA being different.}
 
-
-
-
-
-
-
-
+\ex{Control in Eukaryotes}{
+	\begin{enumerate}
+		\item DNA gets transcribed into pre-mRNA
+		\item pre-mRNA gets spliced to the proper mRNA
+		\item mRNA gets translated into proteins.
+		\item The proteins then do their thing.
+	\end{enumerate}
+	We control this by stopping translation and transcription. It's hard to explain, but think of it as a main water line to your home.
+	We stop the main line, then go throughout the house draining the individual sections by turning on the sink.}
 
 \newpage
-\listoffigures
+\section{Regulating DNA Structure}
+
+\dfn{Histone Acetylation}{
+	\begin{enumerate}
+		\item [-] Acetylated histones seperate from each other; DNA is looser.
+		\item [-] Why? Positive Charges are neutralized; no charge to attract.
+		\item [-] Allows for transcription
+	\end{enumerate}
+}
+\dfn{Methylation}{
+	\begin{enumerate}
+		\item [-] Adding methyl groups to DNA to prevent transcription.
+		\item [-] Methyl groups are also added to histone proteins.
+	\end{enumerate}
+}
+
+
+
+
+
+
+
+
+
+
 
 \newpage
 \begin{figure}
 	\centering
 	\Huge{Thanks for reading}
-	\includegraphics[scale=0.5]{dabloon.png}
+	\includegraphics[scale=0.2]{dabloon.jpg}
 	\label{dabloonia}
 \end{figure}
 \end{document}
