@@ -23,6 +23,13 @@
 \tableofcontents
 \pagebreak
 
+\thispagestyle{empty}
+\newpage
+\listoffigures
+\clearpage
+\pagenumbering{arabic}
+
+
 \chapter{Chemistry of Life}
 \section{Scientific Method}
 \section{Feedback}
@@ -150,8 +157,11 @@
 
 \subsection{Cloning}
 \dfn{Polymerase Chain Reaction (PCR)}{A process by which sections of a DNA sample is amplified. The process is done in a thermocycler.}
-\begin{figure}
-	\includegraphics[scale=0.4]{Chapter 13 - PCR.png} \label{PCR}
+\begin{figure}[h]
+	\centering
+	\caption{Polymerase Chain Reaction}
+	\includegraphics[scale=0.4]{Chapter 13 - PCR.png} 
+	\label{PCR}
 \end{figure}
 \dfn{Restriction Enzyme}{Cleaves DNA sequences as sequence-specific sites, producing DNA fragments with a known sequence at each end.}
 
@@ -174,7 +184,9 @@
 	$\bullet$ We can tell which are longer and which are shorter by looking at how far each strand traveled. Shorter strands will travel farther over time. \\
 	$\bullet$ We can then stain the sorted groups of DNA, allowing the naked eye to see them. We don't see individual strands, though, we see the groups of them.
 	\nt{Fragments are sorted by \textbf{size} and \textbf{charge}. Smaller molecules go farther.}}
-\begin{figure}
+\begin{figure}[h]
+	\centering
+	\caption{Gel Electrophoresis}
 	\includegraphics[scale=0.3]{Chapter 13 - Gel Electrophoresis.png}
 	\label{Gel Electrophoresis}
 \end{figure}
@@ -189,7 +201,9 @@
 			\item Guide RNA: Complimentary piece of RNA that binds to a target gene.
 		\end{enumerate}}
 \nt{If you know the sequence of the gene, you can create the guide RNA.}}
-\begin{figure}
+\begin{figure}[h]
+	\centering
+	\caption{Cas9 RNA Targetting}
 	\includegraphics[scale=1]{Chapter 13 - Cas9 RNA.jpg} 
 	\label{Cas9}
 \end{figure}

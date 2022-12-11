@@ -5,6 +5,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{enumitem}
 \usepackage{pgfplots}
+	\pgfplotsset{compat=1.18}
 \usepackage{bold-extra}
 \usepackage{lmodern}
 \usepackage{hyperref}
@@ -12,6 +13,7 @@
 \input{preamble}
 \input{macros}
 \input{letterfonts}
+
 
 \title{\Huge{Precalculus}}
 \author{Me. I am Him.}
@@ -195,13 +197,70 @@
 		\item other thing
 	\end{enumerate}}
 
+\section{Logarithmic Functions}
+
+\dfn{Logarithmic Function:}{The opposite to an exponential function. The logarithmic function to the base a, where $a>0$ and $a\neq0$, is denoted and defined by $y=\log_{x}x$ if and only if $x=a^{y}$}
+\nt{You can remember the format by thinking log-base-answer-exponent.}
+
+\ex{2: Change each exponential expression to an equivalent expression involving a logarithm.}{
+	\begin{enumerate}
+		\item $1.2^{3} \rightarrow $
+	\end{enumerate}
+}
+
+\ex{3: Change each logarithmic expression to an equivalent expression involving an exponent.}{
+	\begin{enumerate}
+		\item $\log_{a}4=5 \rightarrow a^{5}=4$
+		\item $\log_{b}e=-3 \rightarrow b^{-3}=e$
+		\item $\log_{3}5=c \rightarrow 3^{c}=5$
+	\end{enumerate}
+}
+\begin{theorem}
+	Get that exponential theorem from slides
+\end{theorem}
+
+\ex{4: Find he exact value of:}{
+	\begin{enumerate}
+		\item $\log_{2}16=x \rightarrow x=4$
+		\item $\log_{3}\frac{1}{27}=x \rightarrow x=-3$ Convert to exponential then use the rules of exponents.
+		\item $\log_{4}2=x \rightarrow x=\frac{1}{2}$
+	\end{enumerate}
+}
+
+\thm{Determine the Domain of a logarithmic function:}{
+	\begin{enumerate}
+		\item [-] Domain of the logarithmic function = range of the exponential function = $(0,\infty)$
+		\item [-] Range of the logarithmic function = domain of the exponential function = $(-\infty,\infty)$
+	\end{enumerate}
+}
+
+\ex{5: Find the domain of each logarithmic function:}{
+	\begin{enumerate}
+		\item $f(x) = \log_{2}(x+3) \rightarrow	x+3>0 \rightarrow x>-3 \rightarrow (-3,\infty)$
+		\item $g(x) = \log_{b}(\frac{1+x}{1-x}) \rightarrow \frac{1+x}{1-x}>0 \rightarrow x\neq 1,-1$. Now use a number line to find out where it applies. In this case it is $-1<x<1$ or $(-1,1)$ or ${x|x\neq 1,-1}$
+		\item $h(x) = \log_{\frac{1}{2}}\abs{x} \rightarrow \abs{x}>0 \rightarrow \textbf{Domain} = \mathbb{R}$ where $x\neq 0$, or All Real Numbers where $x\neq 0$, or ${x|x\neq 0}$
+	\end{enumerate}
+}
 
 
 
-
-
-
-
+\newpage
+\huge{Graphs}
+\begin{tikzpicture}
+	\begin{axis}[
+		xlabel=$x$,
+		ylabel=$y$,
+		xtick={-5,-4,-3,-2,-1,0,1,2,3,4,5},
+		ytick={-5,-4,-3,-2,-1,0,1,2,3,4,5},
+		ymin=-5,
+		ymax=3,
+		xmin=-3,
+		xmax=5,
+		yticklabels={5,-4,-3,-2,-1,0,1,2,3,4,5},
+		xticklabels={-5,-4,-3,-2,-1,0,1,2,3,4,5},]
+	\addplot[samples=5000, smooth, domain=-5:5, red] {log10(x)};
+	\end{axis}
+\end{tikzpicture}
 
 
 
