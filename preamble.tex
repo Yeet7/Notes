@@ -33,6 +33,15 @@
 \usepackage{xifthen}
 \usepackage{pdfpages}
 \usepackage{transparent}
+% Custom packages
+\usepackage{bold-extra}
+\usepackage{lmodern}
+\usepackage{array}
+\usepackage{pgfplots}
+	\pgfplotsset{compat=1.18}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
 
 \newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
 \SetCommentSty{mycommfont}
@@ -78,7 +87,11 @@
 \definecolor{myyellow}{RGB}{169,121,69}
 \definecolor{myexercisebg}{HTML}{F2FBF8}
 \definecolor{myexercisefg}{HTML}{88D6D1}
-
+% Custom Colors
+\definecolor{sakura}{rgb}{0.99, 0.79, 0.73}
+\definecolor{sakcomp}{rgb}{0.73, 0.93, 0.99}
+\definecolor{iceblue}{rgb}{0.28, 0.79, 0.89}
+\definecolor{deeppurple}{rgb}{0.70, 0.45, 1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TCOLORBOX SETUPS
@@ -582,6 +595,7 @@
 	#1,
 }
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SELF MADE COMMANDS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -775,3 +789,63 @@
 	  \end{tikzpicture}}%
 	\@starttoc{toc}}
 \makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Personalized Commands and Such
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%================================
+% Are You Prepared Box
+%================================
+
+\newtcbtheorem[number within=section]{Prepared}{Are You Prepared?}{enhanced,
+	before skip=2mm,after skip=2mm, colback=iceblue!5,colframe=iceblue!80!black,boxrule=0.5mm,
+	attach boxed title to top left={xshift=1cm,yshift*=1mm-\tcboxedtitleheight}, varwidth boxed title*=-3cm,
+	boxed title style={frame code={
+					\path[fill=tcbcolback]
+					([yshift=-1mm,xshift=-1mm]frame.north west)
+					arc[start angle=0,end angle=180,radius=1mm]
+					([yshift=-1mm,xshift=1mm]frame.north east)
+					arc[start angle=180,end angle=0,radius=1mm];
+					\path[left color=tcbcolback!60!black,right color=tcbcolback!60!black,
+						middle color=tcbcolback!80!black]
+					([xshift=-2mm]frame.north west) -- ([xshift=2mm]frame.north east)
+					[rounded corners=1mm]-- ([xshift=1mm,yshift=-1mm]frame.north east)
+					-- (frame.south east) -- (frame.south west)
+					-- ([xshift=-1mm,yshift=-1mm]frame.north west)
+					[sharp corners]-- cycle;
+				},interior engine=empty,
+		},
+	fonttitle=\bfseries,
+	title={#2},#1}{arp}
+\newtcbtheorem[number within=chapter]{prepared}{Are You Prepared?}{enhanced,
+	before skip=2mm,after skip=2mm, colback=iceblue!5,colframe=iceblue!80!black,boxrule=0.5mm,
+	attach boxed title to top left={xshift=1cm,yshift*=1mm-\tcboxedtitleheight}, varwidth boxed title*=-3cm,
+	boxed title style={frame code={
+					\path[fill=tcbcolback]
+					([yshift=-1mm,xshift=-1mm]frame.north west)
+					arc[start angle=0,end angle=180,radius=1mm]
+					([yshift=-1mm,xshift=1mm]frame.north east)
+					arc[start angle=180,end angle=0,radius=1mm];
+					\path[left color=tcbcolback!60!black,right color=tcbcolback!60!black,
+						middle color=tcbcolback!80!black]
+					([xshift=-2mm]frame.north west) -- ([xshift=2mm]frame.north east)
+					[rounded corners=1mm]-- ([xshift=1mm,yshift=-1mm]frame.north east)
+					-- (frame.south east) -- (frame.south west)
+					-- ([xshift=-1mm,yshift=-1mm]frame.north west)
+					[sharp corners]-- cycle;
+				},interior engine=empty,
+		},
+	fonttitle=\bfseries,
+	title={#2},#1}{arp}
+
+\newcommand{\arp}[2]{\begin{Prepared}[colbacktitle=iceblue!75!black]{#1}{}#2\end{Prepared}}
+
+%================================
+% Refactoring Commands
+%================================
+
+
+%================================
+% New Characters
+%================================

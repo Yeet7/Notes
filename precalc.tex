@@ -1,23 +1,17 @@
 \documentclass{report}
 
-\usepackage{graphicx}
-	\graphicspath{ {./images/Precalc} }
-\usepackage[T1]{fontenc}
-\usepackage{enumitem}
-\usepackage{pgfplots}
-	\pgfplotsset{compat=1.18}
-\usepackage{bold-extra}
+
 \usepackage{lmodern}
-\usepackage{hyperref}
-\usepackage{array}
 \input{preamble}
 \input{macros}
 \input{letterfonts}
+\graphicspath{ {./images/Precalc} }
 
 
 \title{\Huge{Precalculus}}
 \author{Me. I am Him.}
 \date{11/28/2022}
+
 
 \begin{document}
 
@@ -27,7 +21,17 @@
 \tableofcontents
 \pagebreak
 
+\thispagestyle{empty}
+\newpage
+\listoffigures
+\clearpage
+\pagenumbering{arabic}
+\pagebreak
+
+
 \chapter{}
+\arp{Yeet2}{1}
+
 \chapter{}
 
 \chapter{}
@@ -88,7 +92,7 @@
 		\item $a^{m} \cdot a^{n} = a^{m+n}$			Example: 		$3^{2}\cdot 3^{5} = 3^{2+5} = 3^{7} = 2187$
 		\item $(a^{m})^{n} = a^{mn}$		Example:		$(2^{3})^{2} = 2^{3\cdot 2} = 2^{6} = 64$
 		\item $(ab)^{m} = a^{m}b^{m}$		Example:		$(5x)^3$
-		\item $1^{n} = 1$		Exaple:			$1{1001} = 1$
+		\item $1^{n} = 1$		Example:			$1^{1001} = 1$
 		\item $a^{-n} = \frac{1}{a^{n}}$		Example:		$5^{-2} = \frac{1}{5^{2}} = \frac{1}{25}$
 		\item $a^{0} = 1$		Example:		$7^{0} = 1$
 		\item $a^{\frac{m}{n}} = \sqrt[n]{a^{m}} = (\sqrt[n]{a})^{m}$		Example:		$8^{\frac{2}{3}} = \sqrt[3]{8^{2}} = (\sqrt[3]{8})^{2} = 2^{2} = 4$
@@ -215,9 +219,8 @@
 		\item $\log_{3}5=c \rightarrow 3^{c}=5$
 	\end{enumerate}
 }
-\begin{theorem}
-	Get that exponential theorem from slides
-\end{theorem}
+\thm{}{
+	Get that exponential theorem from slides}
 
 \ex{4: Find he exact value of:}{
 	\begin{enumerate}
@@ -236,32 +239,43 @@
 
 \ex{5: Find the domain of each logarithmic function:}{
 	\begin{enumerate}
-		\item $f(x) = \log_{2}(x+3) \rightarrow	x+3>0 \rightarrow x>-3 \rightarrow (-3,\infty)$
-		\item $g(x) = \log_{b}(\frac{1+x}{1-x}) \rightarrow \frac{1+x}{1-x}>0 \rightarrow x\neq 1,-1$. Now use a number line to find out where it applies. In this case it is $-1<x<1$ or $(-1,1)$ or ${x|x\neq 1,-1}$
-		\item $h(x) = \log_{\frac{1}{2}}\abs{x} \rightarrow \abs{x}>0 \rightarrow \textbf{Domain} = \mathbb{R}$ where $x\neq 0$, or All Real Numbers where $x\neq 0$, or ${x|x\neq 0}$
+		\item $f$($x$) = $\log_{2}(x+3) \rightarrow	x+3>0$
+		\begin{itemize}
+			\item $x>-3$ or $(-3,\infty)$
+		\end{itemize}
+		\item $g$($x$) = $\log_{b}(\frac{1+x}{1-x}) \rightarrow \frac{1+x}{1-x}>0$
+		\begin{itemize}
+			\item $x\neq 1,-1$. Now use a number line to find out where it applies. In this case it is $-1<x<1$ or $(-1,1)$ or ${x|x\neq 1,-1}$
+		\end{itemize}
+		\item $h$($x$) = $\log_{\frac{1}{2}}\abs{x} \rightarrow \abs{x}>0$
+		\begin{itemize}
+			\item $\textbf{Domain} = \mathbb{R}$ where $x\neq 0$, or All Real Numbers where $x\neq 0$, or ${x|x\neq 0}$
+		\end{itemize}
 	\end{enumerate}
 }
 
 
-
 \newpage
-\huge{Graphs}
-\begin{tikzpicture}
-	\begin{axis}[
+\begin{figure}
+	\caption{$\log_{10}x$}
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
 		xlabel=$x$,
 		ylabel=$y$,
-		xtick={-5,-4,-3,-2,-1,0,1,2,3,4,5},
+		xtick={-1,0,1,2,3,4,5},
 		ytick={-5,-4,-3,-2,-1,0,1,2,3,4,5},
 		ymin=-5,
 		ymax=3,
-		xmin=-3,
+		xmin=-1,
 		xmax=5,
 		yticklabels={5,-4,-3,-2,-1,0,1,2,3,4,5},
 		xticklabels={-5,-4,-3,-2,-1,0,1,2,3,4,5},]
-	\addplot[samples=5000, smooth, domain=-5:5, red] {log10(x)};
-	\end{axis}
-\end{tikzpicture}
-
+		\addplot[samples=200, smooth, domain=-1:5, red] {log10(x)};
+		\end{axis}
+	\end{tikzpicture}
+	\label{Log10x}
+\end{figure}
 
 
 
