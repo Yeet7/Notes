@@ -200,6 +200,8 @@
 		\item graph
 		\item other thing
 	\end{enumerate}}
+\section{}
+\section{}
 
 \section{Logarithmic Functions}
 
@@ -250,6 +252,77 @@
 		\item $h$($x$) = $\log_{\frac{1}{2}}\abs{x} \rightarrow \abs{x}>0$
 		\begin{itemize}
 			\item $\textbf{Domain} = \mathbb{R}$ where $x\neq 0$, or All Real Numbers where $x\neq 0$, or ${x|x\neq 0}$
+		\end{itemize}
+	\end{enumerate}
+}
+
+
+\subsection{Natural Logarithm}
+\thm{If the base of a logarithmic function is the number e, then we have the natural logarithm function. That is,}{
+\begin{enumerate}
+	\item y = ln x if and only if x = ey
+	\item y = ln x and y = ex are inverse functions	
+\end{enumerate}}
+\thm{Common Logarithm Function}{If the base of a logarithmic function is the number 10, then we have the common logarithm function. If the base a of the logarithmic function is not indicated, it is understood to be 10. That is,
+\begin{itemize}
+	\item $y=log_{x}$ if and only if $x=10^y$
+\end{itemize}}
+
+\ex{6 \& 7: Determine the domain, range, and vertical asymptote of each logarithmic function. List any transformations.}{
+	\begin{enumerate}
+		\item [a.] $f(x) = \ln(x) \rightarrow g(x) = -\ln(x+2)$
+		\begin{itemize}
+			\item Domain: $x>-2$
+			\item Range: $(-\infty,\infty)$
+			\item Vertical Asymptote: $x\neq-2$
+		\end{itemize} 
+		\nt{The negtive applied to the natural log, seen in the equation $-\ln(x+2)$, is causing it to reflect over the x-axis.}
+		\item [b.] $f(x) = \log(x) \rightarrow g(x) = 3\log(-x)-1$
+	\end{enumerate}
+}
+\thm{Equations that contain logarithms are called logarithmic equations. Be sure to check each solution in the original equation and discard any extraneous solutions. Remember in logaM, a and M are positive and $a\neq 1$.
+\begin{enumerate}
+	\item Change the logarithmic equation to an exponential equation and solve for x
+	\item If the exponential equation has base e, change it to the natural logarithm function
+	\item If the exponential equation has base 10, change it to the common logarithm function
+\end{enumerate}}
+
+\ex{8: Solve for x}{
+	\begin{enumerate}
+		\item $\log_{3}(4x-7)=2$
+		\begin{itemize}
+			\item $3^{2}=4x-7$
+			\item $9=4x-7$
+			\item $x=4$
+		\end{itemize}
+		\item $\log_{x}(64)=2$
+		\begin{itemize}
+			\item $x^{2}=64$
+			\item $x=\sqrt[2]{64}$
+			\item $x=8$ Note: -8 does not work as a solution as base values for a logarithm must be greater than 1.
+		\end{itemize}
+	\end{enumerate}
+}
+
+\ex{8.5: Solve for x. Give the exact solution then use your calculator to give the approximate solution.}{
+	\begin{enumerate}
+		\item $e^{2x}=5$
+		\begin{itemize}
+			\item $\log_{e}5=2x$
+			\item $\ln5=2x$
+			\item $\frac{\ln5}{2} = x$
+		\end{itemize}
+	\end{enumerate}
+}
+
+\ex{Additional Example:}{
+	\begin{enumerate}
+		\item $10^{x^{2}+2x+1}=50$
+		\begin{itemize}
+			\item $\log(50)=x^{2}+2x+1$
+			\item $\pm\sqrt[]{\log(50)} = \sqrt[]{(x+1)^{2}}$
+			\item $\pm\sqrt[]{\log(50)}=x+1$
+			\item $x=\pm\sqrt[]{\log(50)}+1$
 		\end{itemize}
 	\end{enumerate}
 }
