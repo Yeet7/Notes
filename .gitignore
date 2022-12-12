@@ -1,8 +1,7 @@
-APBIO.synctex.gz
-precalc.aux
-precalc.fdb_latexmk
-precalc.fls
-precalc.lof
-precalc.log
-precalc.synctex.gz
-precalc.toc
+*.toc
+*.aux
+*.synctex.gz
+*.log
+*.lof
+*.fls
+*.fdb_latexmk
