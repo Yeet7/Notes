@@ -73,7 +73,7 @@
 
 
 
-\chapter{}
+\chapter{4}
 \section{4: Composite Functions}
 \subsection{}
 \nt{11/28/2022 - Didn't really do much. Just reviewed what $f \cdot g$ or f(g(x)) was.} 
@@ -98,23 +98,13 @@
 		\item $a^{\frac{m}{n}} = \sqrt[n]{a^{m}} = (\sqrt[n]{a})^{m}$		Example:		$8^{\frac{2}{3}} = \sqrt[3]{8^{2}} = (\sqrt[3]{8})^{2} = 2^{2} = 4$
 	\end{enumerate}}
 \dfn{Exponential Function}{A function of the form f(x) = a$^{x}$ where x is a positive real number (a>0) and a $\neq$ 1. The domain of $f$ is $\mathbb{R}$}
-\ex{2: Graph the exponential function: $f(x) = 2^{x}$}{
-	\begin{tikzpicture}
-		\begin{axis}[
-			xlabel=$x$,
-			ylabel=$f(x)$,
-			xtick={-3,-2,-1,0,1,2,3,4,5},
-			ytick={0,1,2,4,8,16,32},
-			ymin=0,
-			ymax=32,
-			xmin=-3,
-			xmax=5,
-			yticklabels={0,1,2,4,8,16,32},
-			xticklabels={-3,-2,-1,0,1,2,3,4,5},
-		]
-		\addplot[samples=200, smooth, domain=-3:5, red] {2^x};
-		\end{axis}
-		\end{tikzpicture}}
+\ex{2: Graph the exponential function: $f(x) = 2^{x}$}{}
+	\begin{figure}[ht]
+		\centering
+		\caption{$f(x) = 2^{x}$}
+		\label{101}
+		\includegraphics[scale=0.25]{2^x.jpg}
+	\end{figure}
 \nt{Properties of the Exponential Function: $f(x) = a^{x}$, where $a>1$
 	\begin{enumerate}
 		\item The \textit{domain} is the set of all real numbers. The \textit{range} is the set of all positive real numbers.
@@ -124,23 +114,13 @@
 		\item The graph of f contains the points (0,1),(1,a), and (-1,1/a).
 		\item The graph of f is smooth and continuous, with no corners or gaps.
 	\end{enumerate}}
-\ex{3: Graph the exponential function: $f(x)=(\frac{1}{2})^{2}$}{
-	\begin{tikzpicture}
-		\begin{axis}[
-			xlabel=$x$,
-			ylabel=$f(x)$,
-			xtick={-5,-4,-3,-2,-1,0,1,2,3,4,5},
-			ytick={0,1,2,4,8,16,32},
-			ymin=0,
-			ymax=32,
-			xmin=-5,
-			xmax=5,
-			yticklabels={0,1,2,4,8,16,32},
-			xticklabels={-5,-4,-3,-2,-1,0,1,2,3,4,5},
-		]
-		\addplot[samples=200, smooth, domain=-5:5, red] {(1/2)^x};
-		\end{axis}
-	\end{tikzpicture}}
+\ex{3: Graph the exponential function: $f(x)=(\frac{1}{2})^{2}$}{s}
+\begin{figure}[ht]
+	\centering
+	\caption{$f(x)=(\frac{1}{2})^{2}$}
+	\label{102}
+	\includegraphics[scale=0.25]{0.5^x.jpg}
+\end{figure}
 \nt{Properties of Exponential Function: $f(x)=a^{x}$, where $0<x<1$.
 \begin{enumerate}
 	\item The domain is the set of all real numbers; the range is the set of positive real numbers.
@@ -151,27 +131,19 @@
 	\item The graph of f is smooth and continuous, with no corners or gaps.
 \end{enumerate}}
 \ex{Graph $f(x) = 2^{-x}-3$ and determine the domain, range, and horizontal asymptote of $f$.}{
-	\begin{tikzpicture}
-		\begin{axis}[
-			xlabel=$x$,
-			ylabel=$f(x)$,
-			xtick={-5,-4,-3,-2,-1,0,1,2,3,4,5},
-			ytick={-3,0,3,6,9,12,14,18,24,32},
-			ymin=-3,
-			ymax=32,
-			xmin=-5,
-			xmax=5,
-			yticklabels={-3,0,3,6,9,12,14,18,24,32},
-			xticklabels={-5,-4,-3,-2,-1,0,1,2,3,4,5},]
-		\addplot[samples=200, smooth, domain=-5:5, red] {2^(-x)-3};
-		\end{axis}
-	\end{tikzpicture}
-\begin{enumerate}
+	\begin{enumerate}
 		\item [-] Domain: ${x|x\in\mathbb{R}}$ or $[-\infty,\infty]$
 		\item [-] Range: ${y|y>-3}$ or $[-3,\infty]$
 		\item [-] Horizontal Asymptote: $y=-3$
 \end{enumerate}
 }
+\begin{figure}[ht]
+	\centering
+	\caption{$f(x) = 2^{-x}-3$}
+	\label{103}
+	\includegraphics[scale=0.25]{-2^x-3.jpg}
+\end{figure}
+
 \ex{Explain the transformation of g(x) from $f(x) = e^{x}$}{
 	\begin{tabular}{rl} 
 		& $\bullet$ $g(x) = -e^{x-3}$ \\
@@ -327,28 +299,70 @@
 	\end{enumerate}
 }
 
-
-\newpage
 \begin{figure}
-	\caption{$\log_{10}x$}
 	\centering
-	\begin{tikzpicture}
-		\begin{axis}[
-		xlabel=$x$,
-		ylabel=$y$,
-		xtick={-1,0,1,2,3,4,5},
-		ytick={-5,-4,-3,-2,-1,0,1,2,3,4,5},
-		ymin=-5,
-		ymax=3,
-		xmin=-1,
-		xmax=5,
-		yticklabels={5,-4,-3,-2,-1,0,1,2,3,4,5},
-		xticklabels={-5,-4,-3,-2,-1,0,1,2,3,4,5},]
-		\addplot[samples=200, smooth, domain=-1:5, red] {log10(x)};
-		\end{axis}
-	\end{tikzpicture}
-	\label{Log10x}
+	\caption{$\log_{10}x$}
+	\label{log_10(x)}
+	\includegraphics[scale=0.25]{log_10 x.jpg}
 \end{figure}
+
+\ex{10: The concentration of alcohol in a person's blood is measurable. 
+Recent medical research suggests that the risk $R$ (given as a percent) of having an accident while driving a car can be modeled by the equation $6e^{kx}$ where x is the variable concentration of alcohol n the blood and k is a constant.
+\begin{enumerate}
+	\item Suppose that a concentration in the blood of 0.04 results in a 10\% risk (R=10) of an accident. Find the constant k in the equation. Graph $R=6e^{kx}$ using the k value.
+	\begin{itemize}
+		\item do stuff so that k=20.62. She literally used her calc
+	\end{itemize}
+	\item Using the value of k, what is the risk if the concentration is 0.17?
+	\begin{itemize}
+		\item uhhhh she didn't do this.
+	\end{itemize}
+	\item Using the same value of k, what concentration of alcohol corresponds to a risk of 100\%?
+	\begin{itemize}
+		\item didn't do this one either. aparently D is the most important.
+	\end{itemize}
+	\item If the law asserts that anyone with a risk of having an accidnet of 20\% or more should not have driving privileges, at what concentration of alcohol in the blood should a driver be arrested and charged with a DUI?
+	\begin{itemize}
+		\item $20=6e^{12.77x}$
+		\item $\frac{10}{3}=e^{12.77x}$
+		\item $\ln(\frac{10}{3})=12.77x$
+		\item $x=0.94$
+	\end{itemize}
+\end{enumerate}}
+
+\section{4.5: Properties of Logarithms}
+
+\nt{Properties of logarithms:
+\begin{enumerate}
+	\item Identity $\rightarrow \log_{a}1=0$ or $\log_{a}a=1$
+	\item Inverse $\rightarrow \log_{b}b^{x}=x$ or $b^{\log_{b}(x)}x$
+	\item Product $\rightarrow \log_{a}xy=log = \log_{a}x+\log_{a}y$
+	\item Quotient $\rightarrow \log_{a}\frac{x}{y}=\log_{a}-\log_{a}y$
+	\item Equality $\rightarrow \log_{b}a=\log_{b}c \Rrightarrow a=c$
+	\item Change of Base Formula $\rightarrow \log_{a}b=\frac{\log_{c}b}{\log_{c}b}$
+\end{enumerate}}
+
+\ex{1: Use properties of logarithms to find the exact value of each expression. Do not use a calculator.}{
+	\begin{enumerate}
+		\item $\ln e^{\sqrt{2}}$
+		\begin{itemize}
+			\item $\log_{e}e^{\sqrt{2}}$
+			\item $\sqrt{2}\times\log_{e}e$
+			\item $\sqrt{2}\times\ln{e}$
+		\end{itemize}
+		\item $\log_{8}$
+	\end{enumerate}
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
