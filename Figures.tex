@@ -6,8 +6,8 @@
     \pgfplotsset{compat=1.18}
 
 
-\input{macros.tex}
-\input{letterfonts.tex}
+\input{macros}
+\input{letterfonts}
 
 \title{Figures for Every Subject.}
 \author{Me.}
@@ -30,6 +30,7 @@
 \begin{figure}
 	\centering
 	\caption{$2^{x}$}
+	\label{fig:2^{x}}
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel=$x$,
@@ -51,6 +52,7 @@
 \begin{figure}
 	\centering
 	\caption{$(\frac{1}{2})^{x}$}
+	\label{fig:(1/2)^{x}}
 	\begin{tikzpicture}
 	\begin{axis}[
 		xlabel=$x$,
@@ -72,8 +74,9 @@
 \begin{figure}
 	\centering
 	\caption{$2^{-x}-3$}
-\begin{tikzpicture}
-	\begin{axis}[
+	\label{fig:2^{-x}-3}
+	\begin{tikzpicture}
+		\begin{axis}[
 		xlabel=$x$,
 		ylabel=$f(x)$,
 		xtick={-5,-4,-3,-2,-1,0,1,2,3,4,5},
@@ -92,6 +95,7 @@
 \begin{figure}
     \centering
 	\caption{$\log_{10}x$}
+	\label{fig:log_{10}x}
 	\begin{tikzpicture}
 		\begin{axis}[
 		xlabel=$x$,
@@ -107,12 +111,12 @@
 		\addplot[samples=200, smooth, domain=-1:5, red] {log10(x)};
 		\end{axis}
 	\end{tikzpicture}
-	\label{Log10x}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\caption{$\log_{2}x$}
+	\label{fig:log_{2}x}
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel=$x$,
@@ -127,6 +131,27 @@
 			xticklabels={-5,-4,-3,-2,-1,0,1,2,3,4,5},]
 			\addplot[samples=200, smooth, domain=-1:5, red] {log2(x)};
 			\end{axis}
+	\end{tikzpicture}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\caption{$\log_{2}2x$}
+	\label{fig:log_{2}2x}
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel=$x$,
+			ylabel=$y$,
+			xtick={-1,0,1,2,3,4,5},
+			ytick={-5,-4,-3,-2,-1,0,1,2,3,4,5},
+			ymin=-5,
+			ymax=3,
+			xmin=-1,
+			xmax=5,
+			yticklabels={5,-4,-3,-2,-1,0,1,2,3,4,5},
+			xticklabels={-5,-4,-3,-2,-1,0,1,2,3,4,5},]
+			\addplot[samples=200, smooth, domain=-1:5, red] {log2(2*x)};
+		\end{axis}
 	\end{tikzpicture}
 \end{figure}
 

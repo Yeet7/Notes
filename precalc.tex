@@ -1,11 +1,10 @@
 \documentclass{report}
 
 
-\usepackage{lmodern}
 \input{preamble}
 \input{macros}
 \input{letterfonts}
-\graphicspath{ {./images/Precalc} }
+\graphicspath{ {./images/PRECALC} }
 
 
 \title{\Huge{Precalculus}}
@@ -30,7 +29,6 @@
 
 
 \chapter{}
-\arp{Yeet2}{1}
 
 \chapter{}
 
@@ -59,7 +57,8 @@
 	\begin{center}
 		\item Standard: (0 , c) 
 		\item Vertex: \textit{Plug in 0 for x and solve} 
-		\item Note; There is always one.
+		\item Note;
+		There is always one.
 	\end{center}}
 \nt{x-Intercept
 	\begin{center}
@@ -95,38 +94,42 @@
 		\item $1^{n} = 1$		Example:			$1^{1001} = 1$
 		\item $a^{-n} = \frac{1}{a^{n}}$		Example:		$5^{-2} = \frac{1}{5^{2}} = \frac{1}{25}$
 		\item $a^{0} = 1$		Example:		$7^{0} = 1$
-		\item $a^{\frac{m}{n}} = \sqrt[n]{a^{m}} = (\sqrt[n]{a})^{m}$		Example:		$8^{\frac{2}{3}} = \sqrt[3]{8^{2}} = (\sqrt[3]{8})^{2} = 2^{2} = 4$
+		\item $a^{\frac{m}{n}} = \sqrt[n]{a^{m}} = \left(\sqrt[n]{a}\right)^{m}$		Example:		$8^{\frac{2}{3}} = \sqrt[3]{8^{2}} = \left(\sqrt[3]{8}\right)^{2} = 2^{2} = 4$
 	\end{enumerate}}
 \dfn{Exponential Function}{A function of the form f(x) = a$^{x}$ where x is a positive real number (a>0) and a $\neq$ 1. The domain of $f$ is $\mathbb{R}$}
 \ex{2: Graph the exponential function: $f(x) = 2^{x}$}{}
 	\begin{figure}[ht]
 		\centering
 		\caption{$f(x) = 2^{x}$}
-		\label{101}
-		\includegraphics[scale=0.25]{2^x.jpg}
+		\label{fig:101}
+		\includegraphics[scale=0.25]{2^(x)}
 	\end{figure}
 \nt{Properties of the Exponential Function: $f(x) = a^{x}$, where $a>1$
 	\begin{enumerate}
-		\item The \textit{domain} is the set of all real numbers. The \textit{range} is the set of all positive real numbers.
-		\item There are no \textit{x-intercepts}. The \textit{y-intercept} is 1.
+		\item The \textit{domain} is the set of all real numbers.
+		The \textit{range} is the set of all positive real numbers.
+		\item There are no \textit{x-intercepts}.
+		The \textit{y-intercept} is 1.
 		\item The \textit{x-axis} (y=0) is a horizontal asymptote as $x \rightarrow -\infty$
 		\item The function is an increasing function and is one-to-one.
 		\item The graph of f contains the points (0,1),(1,a), and (-1,1/a).
 		\item The graph of f is smooth and continuous, with no corners or gaps.
 	\end{enumerate}}
-\ex{3: Graph the exponential function: $f(x)=(\frac{1}{2})^{2}$}{s}
+\ex{3: Graph the exponential function: $f(x)=\left(\frac{1}{2}\right)^{2}$}{}
 \begin{figure}[ht]
 	\centering
-	\caption{$f(x)=(\frac{1}{2})^{2}$}
-	\label{102}
-	\includegraphics[scale=0.25]{0.5^x.jpg}
+	\caption{$f(x)=\left(\frac{1}{2}\right)^{2}$}
+	\label{fig:102}
+	\includegraphics[scale=0.25]{0.5^(x)}
 \end{figure}
 \nt{Properties of Exponential Function: $f(x)=a^{x}$, where $0<x<1$.
 \begin{enumerate}
-	\item The domain is the set of all real numbers; the range is the set of positive real numbers.
-	\item There are no x-intercepts; the y-intercept is 1.
+	\item The domain is the set of all real numbers;
+	the range is the set of positive real numbers.
+	\item There are no x-intercepts;
+	the y-intercept is 1.
 	\item The x-axis (y = 0) is a horizontal asymptote as $x\rightarrow\infty$.
-	\item The function is an decreasing function and is one-to-one.
+	\item The function is a decreasing function and is one-to-one.
 	\item The graph of f contains the points (0, 1), (1, a), and (-1, 1/a).
 	\item The graph of f is smooth and continuous, with no corners or gaps.
 \end{enumerate}}
@@ -140,8 +143,8 @@
 \begin{figure}[ht]
 	\centering
 	\caption{$f(x) = 2^{-x}-3$}
-	\label{103}
-	\includegraphics[scale=0.25]{-2^x-3.jpg}
+	\label{fig:103}
+	\includegraphics[scale=0.25]{2^(-x)-3}
 \end{figure}
 
 \ex{Explain the transformation of g(x) from $f(x) = e^{x}$}{
@@ -155,7 +158,7 @@
 		& $\bullet$ $x+1 = 4$ \\ 
 		& $\bullet$ $x = 3$
 	\end{tabular}}
-\ex{7: Solve $e^{-x^2} = (e^{x^2}\cdot\frac{1}{e^{3}})$}{
+\ex{7: Solve $e^{-x^2} = \left(e^{x^2}\cdot\frac{1}{e^{3}}\right)$}{
 	\begin{tabular}{rl}
 		& $\bullet$ $e^{-x^2} = e^{2x} \cdot e^{-3}$ \\
 		& $\bullet$ $e^{-x^{2}} = e^{2x-3}$ \\
@@ -217,9 +220,11 @@
 		\begin{itemize}
 			\item $x>-3$ or $(-3,\infty)$
 		\end{itemize}
-		\item $g$($x$) = $\log_{b}(\frac{1+x}{1-x}) \rightarrow \frac{1+x}{1-x}>0$
+		\item $g$($x$) = $\log_{b}\left(\frac{1+x}{1-x}\right) \rightarrow \frac{1+x}{1-x}>0$
 		\begin{itemize}
-			\item $x\neq 1,-1$. Now use a number line to find out where it applies. In this case it is $-1<x<1$ or $(-1,1)$ or ${x|x\neq 1,-1}$
+			\item $x\neq 1,-1$.
+			Now use a number line to find out where it applies.
+			In this case it is $-1<x<1$ or $(-1,1)$ or ${x|x\neq 1,-1}$
 		\end{itemize}
 		\item $h$($x$) = $\log_{\frac{1}{2}}\abs{x} \rightarrow \abs{x}>0$
 		\begin{itemize}
@@ -302,16 +307,19 @@
 \begin{figure}
 	\centering
 	\caption{$\log_{10}x$}
-	\label{log_10(x)}
-	\includegraphics[scale=0.25]{log_10 x.jpg}
+	\label{fig:log_10(x)}
+	\includegraphics[scale=0.25]{log_(10)x}
 \end{figure}
 
 \ex{10: The concentration of alcohol in a person's blood is measurable. 
 Recent medical research suggests that the risk $R$ (given as a percent) of having an accident while driving a car can be modeled by the equation $6e^{kx}$ where x is the variable concentration of alcohol n the blood and k is a constant.
 \begin{enumerate}
-	\item Suppose that a concentration in the blood of 0.04 results in a 10\% risk (R=10) of an accident. Find the constant k in the equation. Graph $R=6e^{kx}$ using the k value.
+	\item Suppose that a concentration in the blood of 0.04 results in a 10\% risk (R=10) of an accident.
+	Find the constant k in the equation.
+	Graph $R=6e^{kx}$ using the k value.
 	\begin{itemize}
-		\item do stuff so that k=20.62. She literally used her calc
+		\item do stuff so that k=20.62.
+		She literally used her calc
 	\end{itemize}
 	\item Using the value of k, what is the risk if the concentration is 0.17?
 	\begin{itemize}
@@ -319,13 +327,14 @@ Recent medical research suggests that the risk $R$ (given as a percent) of havin
 	\end{itemize}
 	\item Using the same value of k, what concentration of alcohol corresponds to a risk of 100\%?
 	\begin{itemize}
-		\item didn't do this one either. aparently D is the most important.
+		\item didn't do this one either.
+		apparently D is the most important.
 	\end{itemize}
-	\item If the law asserts that anyone with a risk of having an accidnet of 20\% or more should not have driving privileges, at what concentration of alcohol in the blood should a driver be arrested and charged with a DUI?
+	\item If the law asserts that anyone with a risk of having an accident of 20\% or more should not have driving privileges, at what concentration of alcohol in the blood should a driver be arrested and charged with a DUI?
 	\begin{itemize}
 		\item $20=6e^{12.77x}$
 		\item $\frac{10}{3}=e^{12.77x}$
-		\item $\ln(\frac{10}{3})=12.77x$
+		\item $\ln\left(\frac{10}{3}\right)=12.77x$
 		\item $x=0.94$
 	\end{itemize}
 \end{enumerate}}
@@ -336,7 +345,7 @@ Recent medical research suggests that the risk $R$ (given as a percent) of havin
 \begin{enumerate}
 	\item Identity $\rightarrow \log_{a}1=0$ or $\log_{a}a=1$
 	\item Inverse $\rightarrow \log_{b}b^{x}=x$ or $b^{\log_{b}(x)}x$
-	\item Product $\rightarrow \log_{a}xy=log = \log_{a}x+\log_{a}y$
+	\item Product $\rightarrow \log_{a}xy=\log = \log_{a}x+\log_{a}y$
 	\item Quotient $\rightarrow \log_{a}\frac{x}{y}=\log_{a}-\log_{a}y$
 	\item Equality $\rightarrow \log_{b}a=\log_{b}c \Rrightarrow a=c$
 	\item Change of Base Formula $\rightarrow \log_{a}b=\frac{\log_{c}b}{\log_{c}b}$
@@ -360,7 +369,7 @@ Recent medical research suggests that the risk $R$ (given as a percent) of havin
 }
 \ex{3:Write the expression as a sum of logarithms. Express all powers as factors.}{
 	\begin{enumerate}
-		\item $\log_{a}(x\sqrt{x^{2}+1})$
+		\item $\log_{a}\left(x\sqrt{x^{2}+1}\right)$
 		\begin{itemize}
 			\item $\log_{a}x + \log_{a}\sqrt{x^{2}+1}$
 			\item $\log_{a}x + \log_{a}(x^{2}+1)^{\frac{1}{2}}$
@@ -370,7 +379,7 @@ Recent medical research suggests that the risk $R$ (given as a percent) of havin
 }
 \ex{4: Write the expression as a difference in logarithms. Express all powrs as factors.}{
 	\begin{enumerate}
-		\item $\ln(\frac{x^{2}}{(x-1)^{3}})$
+		\item $\ln\left(\frac{x^{2}}{(x-1)^{3}}\right)$
 		\begin{itemize}
 			\item $\ln(x^{2})-\ln(x-1)^{3}$
 			\item $2\ln(x)-3\ln(x-1)$
@@ -388,8 +397,8 @@ Recent medical research suggests that the risk $R$ (given as a percent) of havin
 		\item $\frac{2}{3}\ln8-\ln(3^{4}-8)$
 		\begin{itemize}
 			\item $\ln8^{\frac{2}{3}}-\ln(3^{4}-8)$
-			\item $\ln(\frac{8^{\frac{2}{3}}}{3^{4}-8})$
-			\item $\ln(\frac{4}{7^{3}})$
+			\item $\ln\left(\frac{8^{\frac{2}{3}}}{3^{4}-8}\right)$
+			\item $\ln\left(\frac{4}{7^{3}}\right)$
 		\end{itemize}
 		\item $\log _a x+\log _a 9+\log _a\left(x^2+1\right)-\log _a 5$
 		\begin{itemize}
@@ -406,12 +415,16 @@ Recent medical research suggests that the risk $R$ (given as a percent) of havin
 		\end{itemize}
 	\end{enumerate}
 }
-\ex{9: Use a graphing utility to graph the following:}{
+\ex{9: Use a graphing utility to graph the following}{
 	\begin{enumerate}
 		\item $y=\log_{2}x$
-		\item make graphhhhhhhhhhhhhhhhhhhhhh
 	\end{enumerate}
 }
+\begin{figure}
+	\caption{$\log_{2}x$}
+	\label{fig:log_(2)x}
+	\includegraphics[scale=0.25]{log_(2)x}
+\end{figure}
 
 
 
@@ -431,8 +444,8 @@ Recent medical research suggests that the risk $R$ (given as a percent) of havin
 \begin{figure}
 	\centering
 	\Huge{Thanks for reading}
-	\includegraphics[scale=0.2]{dabloon.jpg}
-	\label{dabloonia}
+	\includegraphics[scale=0.2]{dabloon}
+	\label{fig:dabloonia}
 \end{figure}
 
 
