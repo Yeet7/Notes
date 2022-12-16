@@ -4,7 +4,16 @@
 \usepackage{hyperref} % for links
 \usepackage{amsmath} % for math formatting
 \usepackage{subcaption} % for subfigures
-\usepackage{geometry} % for page layout
+\usepackage[a4paper,
+    bindingoffset=0.2in,
+    left=0.55in,
+    right=0.55in,
+    top=1in,
+    bottom=1in,
+    footskip=.25in
+]{geometry}
+\usepackage{enumitem}
+\usepackage{calc} % for page layout
 
 \title{AP Biology Lab Report 12}
 \author{Brandon Downs \\ Evander Hock}
@@ -16,33 +25,43 @@
 \section{Purpose}
 
 The purpose of this lab was to explore how different lengths of DNA travel different distances using \textit{Gel ELectrophoresis}.
+We were able to measure this distance and then approximate the amount of nitrogenous bases based on a given standard.
 
 \section{Analysis}
 
-After anlyzing the DNA fragments, the most likely perpetrator is \textit{suspect \#7}. We figured this out after analyzing the results from the Gel Electrophoresis run and comparing the crime scene sample DNA to the DNA sample from suspect 7. They are not only the closest, but they are nearly identical.
+After analyzing the DNA fragments, the most likely perpetrator is \textit{suspect \#7}. We figured this out after analyzing the results from the Gel Electrophoresis run and comparing the crime scene sample DNA to the DNA sample from suspect 7. They are not only the closest, but they are nearly identical.
 
 \section{Conclusion}
 
-Our results can be seen in...
+\begin{enumerate}
+    \item Different restriction enzymes are isolated from different types of bacteria.  What advantage do you think bacteria gain by having restriction enzymes?
+    \begin{itemize}
+        \item Restriction enzymes serve as a sort of self-defense mechanism that protects the organism from invaders like pathogens.
+    \end{itemize}
+    \item If everything in this lab stayed the same except that you placed your gel in the electrophoresis chamber with the wells containing the DNA next to the red electrode instead of the black, what would happen?  Explain.
+    \begin{itemize}
+        \item The likely result would be the DNA running off of the tray and into the reservoir of water, leaving little to no measurable data.
+        This is thanks to the phosphate groups in DNA, which lead it to have an overall negative charge. That then causes it to be attracted to the positive electrode.
+    \end{itemize}
+    \item If you have a restriction enzyme that cuts a piece of human DNA at two recognition sites, how many fragments would you see on a gel?
+    Explain. If you have a restriction enzyme that cuts a bacterial chromosome at two recognition sites, how many fragments would you see on a gel? Explain.
+    \begin{itemize}
+        \item If you cut an item twice, you get three items in total. Two on the ends, and one between the two cuts.
+        So, if you were to cut a fragment of DNA twice, you would end up with three pieces. The same is true for bacterial chromosomes.
+        While bacterial chromosomes, or plasmids, are circular, cutting it twice would produce the same result.
+    \end{itemize}
+    \item You are attempting to insert a human gene into a bacterial plasmid.
+    You know the human gene is bordered by a sequence that can be cut by restriction enzyme X.
+    You have a plasmid that you know has a sequence that can be cut by restriction enzyme Y.
+    Upon completion of your work, you are disappointed that the bacteria is not producing the human protein you expected it to. Explain why.
+    \begin{itemize}
+        \item Restriction enzymes are specific to their DNA sequences, which means that the same restriction enzyme must be used on both the human gene and plasmid.
+        Since different restriction enzymes were used, different sticky ends were created, leaving the human DNA with no opportunity to attach to the plasmid thanks to their different ends.
+        In the end, the human gene has not combined with the plasmid thanks to different restriction enzymes and different sticky ends.
+    \end{itemize}
+\end{enumerate}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{example-image}
-    \caption{Caption for figure}
-    \label{fig:label}
-\end{figure}
 
-\begin{table}
-    \centering
-    \begin{tabular}{|c|c|c|}
-        \hline
-        Column 1 & Column 2 & Column 3 \\
-        \hline
-        Data & Data & Data \\
-        \hline
-    \end{tabular}
-    \caption{Caption for table}
-    \label{tab:label}
-\end{table}
+
 
 \end{document}
