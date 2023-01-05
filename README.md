@@ -7,6 +7,3 @@ Source code is the tex files if you want to make any changes. Create a pull requ
 Anything that doesn't seem right, it probably isn't. Let me know. There is placeholders such as empty chapters, sections, or definitions. I'll get to them ~~never~~ eventually.
 
 Notes are taken in order of learning. Certain sections may be blank as placeholders. Otherwise, they are in order.
-
-# Note;
-There will be a huge refactor of directories and such in the coming days. I'll update docs and such as needed.
