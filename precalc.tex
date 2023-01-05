@@ -1,4 +1,5 @@
 \documentclass{report}
+\usepackage{enumerate}
 
 \input{preamble}
 \input{macros}
@@ -338,7 +339,7 @@ Recent medical research suggests that the risk $R$ (given as a percent) of havin
 	\end{itemize}
 \end{enumerate}}
 
-\section{4.5: Properties of Logarithms}
+\section{Properties of Logarithms}
 
 \nt{Properties of logarithms:
 \begin{enumerate}
@@ -425,7 +426,7 @@ Recent medical research suggests that the risk $R$ (given as a percent) of havin
 	\includegraphics[scale=0.25]{log_(2)x}
 \end{figure}
 
-\section{4.5}
+\section{}
 \ex{1: Solve.}{
 	\begin{enumerate}
 		\item $2\log_{5}x=\log_{5}9$
@@ -449,15 +450,134 @@ Recent medical research suggests that the risk $R$ (given as a percent) of havin
 	\end{enumerate}
 }
 
+\section{Interest}
+\dfn{Interest Formulas}{
+\nt{I = amount of interest, A = final amount, P = principal, r = interest rate (as a decimal),\\ t = time (in years), n = number of times compounded per year)}
+	Formulas:
+\begin{enumerate}
+	\item Simple Interest: \[I=Prt\] or \[A=P+I=P+Prt=P(1+rt)\]
+	\item Compound Interest: \[A=P(1+\frac{r}{n})^{nt}\]
+	\item Continuous Compounding: \[A=Pe^{rt}\]
+\end{enumerate}
+}
 
+\ex{1: A credit union pays interest of 8\% per annum compounded quarterly on a certain savings plan. If \$100 is deposited in such a plan and the interest is left to accumulate, how much will be in the account after a year?}{
+\begin{enumerate}
+	\item A = P(1+$\frac{r}{n}$)$^{nt}$
+	\item A = 100(1+$\frac{0.08}{4}$)$^{4*1}$
+	\item A = \$108.24
+\end{enumerate}
+}
+\ex{2 \& 3 : Determine the final amount you invest \$1000 at an annual rate of 10\% for 5 years, compounding at the amounts shown below.}{
+\begin{enumerate}
+	\item A = P(1+$\frac{r}{n}$)$^{nt}$
+	\item P = \$1000
+	\item r = 0.1
+	\item t = 5
+	\begin{itemize}
+		\item Annually:
+		\begin{itemize}
+			\item \$1610.51
+		\end{itemize}
+		\item Semiannually
+		\begin{itemize}
+			\item \$1628.89
+		\end{itemize}
+		\item Quarterly
+		\begin{itemize}
+			\item \$1638.12
+		\end{itemize}
+		\item Monthly
+		\begin{itemize}
+			\item \$1645.31
+		\end{itemize}
+		\item Daily
+		\begin{itemize}
+			\item \$1648.61
+		\end{itemize}
+		\item Continuously
+		\begin{itemize}
+			\item New Formula: $Pe^{rt}$
+			\item \$1648.72
+		\end{itemize}
+	\end{itemize}
+\end{enumerate}
+}
 
+\nt{Calculate Effective rates of return:\\
+The effective rate of interest is the equivalent annual simple rate of interest that would yield the same amount of compounding after 1 year.\\
+To find the effective rate of interest:
+\begin{enumerate}
+	\item Using the appropriate formula, find the final amount $A$.
+	\item Subtract the principal $P$ from the final amount $A$ to get the interest earned $I$.
+	\item Using the simple interest formula, $I = Prt$, plug in values and solve for $r$.
+\end{enumerate}}
 
+\ex{4: On January 2, 2004, \$2000 is placed in an Individual Retirement Account (IRA) that will pay interest of 7\% per annum compounded continuously.}{
+\begin{enumerate}
+	\item [a.] What will the IRA be worth on January 1, 2024?: \\
+	\[Pe=^{rt}=2000e^{0.07*20}=\$8110.40\]
+	\item [b.] Effective Rate of Interest?: (use the last note for guidance) \\
+	\[A=Pe^{rt}=2000e^{0.07*1}=2145.02\] \\
+	\[2145.02-2000=145.02=I\] \\
+	\[I=Prt = 145.02=2000r \rightarrow r = 0.07251 or 7.25\%\]
+\end{enumerate}
+}
 
+\dfn{Determine the Present Value of a Lump Sum of Money}{
+Present Value Formulas are the compound interest and continuous compounding formulas solved for the principal $P$. So,
+\[P=A(1+\frac{r}{n})^{-nt}\]
+\begin{center}
+	or
+\end{center}
+\[Ae^{-rt}\]
+}
 
+\ex{5: A zero-coupon (non-interest bearing) bond can be redeemed in 10 years for \$1000. How much should you be willing to pay for it now if you want a return of:}{
+\begin{enumerate}
+	\item 8\% compounded monthly?
+	\begin{itemize}
+		\item \[P=1000(1+\frac{0.08}{12})^{-12*10}\]
+		\item \[\$450.52\]
+	\end{itemize}
+	\item 7\% compounded continuously?
+	\begin{itemize}
+		\item \[P=1000e^{-0.07*10}\]
+		\item blah, its higher.
+	\end{itemize}
+\end{enumerate}
+}
+\nt{To determine the time required to double or triple lump sums of money, if we want to double P, A will be equal to 2p. Triple is the same thing.}
+\ex{6: What rate of interest compounded annually should you seek if you want to double your investment in 5 years?}{
+\begin{gather*}
+	A=P(1+\frac{r}{n})^{nt} \\
+	2p=P(1+\frac{r}{1})^{1*5} \\
+	Divide by P 2=(1+\frac{r}{1})^{1*5} \\
+	5th Root \sqrt[5]{2}=1+r \\
+	ANS: r=\sqrt[5]{2}-1 \\
+	Or: r=14.9\% \\
+\end{gather*}
+}
 
+\ex{7:}{
+\begin{enumerate}
+	\item How long will it take for an investment to double in value if it earns 5\% interest compounded continuously?
+		\begin{gather*}
+		    A=Pe^{rt}\\
+		    2P=Pe^{0.05t}\\
+		    2=e^{0.05t}\\
+		    \ln(2)=0.05t\\
+		    t=\frac{\ln(2)}{0.05}\\
+		    t=13.86\\
+		\end{gather*}
 
-
-
+	\item How long will it take to triple in value?
+	\begin{gather*}
+	    3P=Pe^{0.05t}\\
+	    t=21.97\\
+	\end{gather*}
+\end{enumerate}
+}
 
 
 
