@@ -575,6 +575,196 @@ Present Value Formulas are the compound interest and continuous compounding form
 \end{enumerate}
 }
 
+\section{Exponential Growth and Decay}
+\dfn{Exponential Growth and Decay follow one formula}{
+Many natural phenomena have been found to follow the law that an amount $A$ varies with the time $t$ according to
+\[A(t)=A_{0}e^{kt}\]
+Where $A_{0}$ is the initial amount at $t=0$and $k$ is a constant not equal to zero.\\
+If $k>0$, then $A$ increases over time (growth). \\
+If $k<0$, then $A$ decreases over time (decay).
+}
+
+\ex{1: The population of a midwestern city follows the exponential law. The population decreased from 900,000 to 800,000 from 2003 to 2005.}{
+\begin{enumerate}
+	\item [k:]Figure out $k$ first.
+	\begin{enumerate}
+		\item \[t=2 \rightarrow A(t)=A_{0}e^{kt}\]
+		\item \[800,000=900,000e^{2k}\]
+		\item Divide by 900,000. \[\frac{8}{9}=e^{2k}\]
+		\item Convert to a log. \[\ln\frac{9}{8}=2k\]
+		\item Divide by two. \[\frac{\ln\frac{8}{9}}{2}=k\]
+		\item \[k=\frac{\ln\frac{8}{9}}{2}\]
+		\item \[k=0.05\dots\]
+	\end{enumerate}
+	\item [a.] What will the population be in 2007?
+	\begin{enumerate}
+		\item \[A(4)=900,000e^{\frac{\ln\frac{8}{9}}{2}\cdot4}\]
+		\item \[711,111\]
+	\end{enumerate}
+	\item [b.] When will the population be half its original amount?
+	\begin{enumerate}
+		\item \[450,000=900,000e^{\frac{\ln\frac{8}{9}}{2}\cdot\ t}\]
+		\item \[\frac{1}{2}=e^{\frac{\ln\frac{8}{9}}{2}\cdot\ t}\]
+		\item \[\ln\frac{1}{2}=\frac{\ln\frac{8}{9}}{2}\cdot\ t\]
+		\item \[t=\frac{\ln\frac{1}{2}}{\frac{\ln\frac{8}{9}}{2}}\]
+	\end{enumerate}
+	\item [c.] When will the population reach 300,000?
+	\begin{enumerate}
+		\item \[\frac{1}{3}=e^{\frac{\ln\frac{8}{9}}{2}\cdot\ t}\]
+		\item \[t=18.65 or 19 years\]
+	\end{enumerate}
+\end{enumerate}
+}
+\ex{2: A colony of bacteria grows according to the law of unhibited growth according to the function $N(t)=100e^{0.045t}$, where $N$ is measured in grams and $t$ is in days.}{
+\begin{enumerate}
+	\item Determine the initial amount of bacteria.
+	\begin{enumerate}
+		\item \[N(0)=100e^{0.045(0)}\]
+	\end{enumerate}
+	\item What is the growth rate of the bacteria?
+	\begin{enumerate}
+		\item \[4.5\%\]
+	\end{enumerate}
+	\item Graph the function using your calculator
+	\begin{enumerate}
+		\item Insert Image here later
+	\end{enumerate}
+	\item What is the population after 5 days?
+	\begin{enumerate}
+		\item \[N(5)=100e^{0.045(5)}\]
+		\item \[N(5)=125.2\]
+	\end{enumerate}
+	\item How long will it take for the population to reach 140 grams?
+	\begin{enumerate}
+		\item \[N(t)=140 \rightarrow 140=100e^{0.045(t)}\]
+		\item \[t=\frac{\ln\frac{7}{5}}{0.045}=7.5\]
+	\end{enumerate}
+	\item What is the doubling time for the population?
+	\begin{enumerate}
+		\item \[N(t)=200 \rightarrow 200=100e^{0.045(t)}\]
+		\item \[t=\frac{\ln 2}{0.045}=15.4\]
+	\end{enumerate}
+\end{enumerate}
+}
+
+\subsection{Half-Life}\label{subsec:half-life}
+
+\dfn{Half-Life}{
+    The amount of time required for any specific property to decrease by half.
+    Steps:
+\begin{enumerate}
+    \item Find $k$ using \[A(t)=\frac{1}{2}A_{0}\]
+    \item using the percent of the original amount left, replace $A(t)$ with the percent as a decimal times $A_{0}$ meaning $A(t)=\% A_{0}$
+\end{enumerate}
+}
+
+\ex{3: Traces of burning wood along with ancient stone tools in an archaeological dig in Chile were found to contain approximately 1.67\% of the original amount of Carbon-14. If the half-life of Carbon-14 is 5,600 years, approximately when was the tree cut and burned?}{
+    Find $k$:
+    \begin{enumerate}
+    \item \[\frac{1}{2}A_{0}=A_{0}e^{k\cdot5600}\]
+    \item \[\frac{\ln\frac{1}{2}}{5600}=k\]
+    \end{enumerate}
+    Find $t$:
+\begin{enumerate}
+    \item \[0.167\cdot\ A_{0}=A_{0}e^{\frac{\ln\frac{1}{2}}{5600}\cdot\ t}\]
+    \item \[\frac{\ln 0.167}{\frac{\ln\frac{1}{2}}{5600}}=t\]
+    \item \[t=33,062\]
+\end{enumerate}
+}
+
+\dfn{Newton's Law of Cooling}{
+The temperature $u$ of a heated object at a given time $t$ can be modeled by the following function:
+\[u(t)=T+(u_{0}-T)e^{kt}\]
+Where $T$ is the constant temperature of the surrounding medium, $u_{0}$ is the initial temperature of the heated object, and $k$ is a negative constant.
+}
+
+\ex{4: An object is heated to 100C and is then allowed to cool in a room whose air temperature is 30C?}{
+\[u(t)=T+(u_{0}-T)e^{kt}\]
+\begin{enumerate}
+    \item Find $k$:
+    \begin{enumerate}
+        \item \[80=30+(100-30)e^{k\cdot\ 5})\]
+        \item \[80=30+70e^{5k})\]
+        \item \[\frac{50}{70}=e^{5k}\]
+        \item \[\frac{5}{7}=e^{5k}\]
+        \item \[k=\frac{\ln\frac{5}{7}}{5}\]
+    \end{enumerate}
+    \item If the temperature of the object is 80C after 5 minutes, when will the temperature be 50C?
+    \begin{enumerate}
+        \item \[50=30+(100-30)e^{\frac{\ln\frac{5}{7}}{5}\cdot\t}\]
+        \item \[t=18.616\]
+    \end{enumerate}
+    \item What is the temperature after 30 minutes?
+    \begin{enumerate}
+        \item \[u(30)=30+(100-30)e^{\frac{\ln\frac{5}{7}}{5}\cdot\ 30}\]
+        \item \[u=39.3\]
+    \end{enumerate}
+\end{enumerate}
+}
+
+\dfn{Logistic Model}{
+In a logistic growth model, the population $P$ after time $t$ obeys the equation:
+\[P(t)=\frac{c}{1+ae^{-bt}}\]
+Where $a$,$b$, and $c$ are constants with $c>0$
+The model is a growth model if $b>0$
+The model is a decay model if $b<0$
+}
+
+\ex{5:}{
+    Fruit flies are placed in a half-pint milk bottle with a banana (food) and yeast plants (for food and to provide a stimulus to lay eggs).
+    Suppose the fruit fly population after $t$ days is given by:
+\[P(t)=\frac{230}{1+56.5e^{-0.37\cdot\ t}}\]
+\begin{enumerate}
+    \item State the carrying capacity and growth rate.
+    \begin{enumerate}
+        \item c=230, b=0.37 or 37\%
+    \end{enumerate}
+    \item Determine the initial population.
+    \begin{enumerate}
+        \item t=o
+        \item \[\frac{230}{1+5.65}\]
+    \end{enumerate}
+    \item What is the population after 5 days?
+    \begin{enumerate}
+        \item $t=$
+        \item \[\frac{230}{1+5.65e^{-0.37\cdot\ 5}}\]
+        \item \[P(t)=23\]
+    \end{enumerate}
+    \item How long does it take for the population to reach 180?
+    \begin{enumerate}
+        \item $P(t)=180$
+        \item \[180=\frac{230}{1+5.65e^{-0.37\cdot\ t}}\]
+        \item \[180(1+5.65e^{-0.37\cdot\ t})= 230\]
+        \item \[t=14.36\]
+    \end{enumerate}
+    \item What do you notice about the population as time passes?
+    \begin{enumerate}
+        \item It will approach 230.
+    \end{enumerate}
+\end{enumerate}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \newpage
